@@ -1,0 +1,45 @@
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-10 col-md-6 col-sm-6">
+       <div class="card">
+          <div class="card-title text-center border-bottom">
+             <h2 class="p-3">Add User</h2>
+          </div>
+          <div class="card-body">
+             <form id="frmUser" method="post" enctype="multipart/form-data" >
+                <input type="hidden" name="_csrf" value="<%- csrfToken %>">
+               <div class="mb-4">
+                   <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+                   <input type="text" class="form-control" id="name" name="name" />
+                   <div id="validationName" class="invalid-feedback"></div>
+                </div>
+                <div class="mb-4">
+                   <label for="username" class="form-label">Username <span class="text-danger">*</span></label>
+                   <input type="text" class="form-control" id="username" name="username" />
+                   <div id="validationUserName" class="invalid-feedback"></div>
+                </div>
+                <div class="mb-4">
+                   <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+                   <input type="password" class="form-control" id="password" name="password" />
+                   <div id="validationPassword" class="invalid-feedback"></div>
+                </div>
+                 <div class="mb-4">
+                    <label for="formFile" class="form-label">Default file input example</label>
+                    <input class="form-control" type="file" id="file" name="file">
+                  </div>
+                <div>
+                    <button type="submit" class="btn text-light main-bg">Save</button>
+                    <button type="button" class="btn text-light main-bg" id="btn_cancel">Cancel</button>
+                </div>
+             </form>
+          </div>
+       </div>
+    </div>
+</div>
+<script type="text/javascript">
+    let id = 0;
+    let url = '/api/v1/user/create';
+    let method = 'POST';
+</script>
+<script src="/js/user.js"></script>
+x
+   

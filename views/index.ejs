@@ -1,0 +1,94 @@
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-4 col-md-6 col-sm-6">
+       <div class="card shadow">
+          <div class="card-title text-center border-bottom">
+             <h2 class="p-3">Login</h2>
+          </div>
+          <div class="card-body">
+             <form id="frmLogin" method="post">
+                <input type="hidden" name="_csrf" value="<%- csrfToken %>">
+                <div class="invalid-feedback text-center my-1" id="usernamePasswordInvalid"></div>
+                <div class="mb-4">
+                   <label for="username" class="form-label">Username</label>
+                   <input type="text" class="form-control" id="username" name="username" />
+                   <div id="validationUserName" class="invalid-feedback"></div>
+                </div>
+                <div class="mb-4">
+                   <label for="password" class="form-label">Password</label>
+                   <input type="password" class="form-control" id="password" name="password" />
+                   <div id="validationPassword" class="invalid-feedback"></div>
+                </div>
+              <!--   <div class="mb-4">
+                   <input type="checkbox" class="form-check-input" id="remember" />
+                   <label for="remember" class="form-label">Remember Me</label>
+                </div> -->
+                <div class="d-grid">
+                   <button type="submit" class="btn text-light main-bg">Login</button>
+                </div>
+             </form>
+          </div>
+       </div>
+    </div>
+</div>
+<script type="text/javascript">
+   $(function() {
+     //edit user
+      $("#frmLogin").on("submit", function (e) {
+         e.preventDefault();
+         $('#validationUserName, #validationPassword, #usernamePasswordInvalid').hide();
+
+         let username = $('#username').val(),
+         password = $('#password').val(),
+         isValidate = true;
+
+         if(typeof username === 'undefined' || username == null || username == ''){
+            $('#validationUserName').text('Username should not be empty').show();
+            isValidate = false;
+         } else if(username.length < 6) {
+            $('#validationUserName').text('Username should be more than 6 character').show();
+            isValidate = false;
+         }
+
+         if(typeof password === 'undefined' || password == null || password == ''){
+            $('#validationPassword').text('Password should not be empty').show();
+            isValidate = false;
+         } else if(password.length < 6) {
+            $('#validationPassword').text('Password should be more than 6 character').show();
+            isValidate = false;
+         }
+
+         if(isValidate){
+            var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+            var formdata = $("#frmLogin").serialize();
+            $.ajax({
+                type: 'POST',
+                url: '/api/v1/user/login/',
+                data: formdata,
+                headers: {
+                  'CSRF-Token': token 
+                },
+                success: function(response) {
+                     if(response.status == 200){
+                        window.location.href = "http://127.0.0.1:8001/user";
+                     } else if(response.status == 401){
+
+                        let errors = response.data.errors;
+                        $.each(errors, function( index, error) {
+                            if(error.param == 'username'){
+                                $('#validationUserName').text(error.msg).show();
+                            } else if(error.param == 'password'){
+                                $('#validationPassword').text(error.msg).show();
+                            }
+                        });
+                      
+                     } else {
+                         $('#usernamePasswordInvalid').text(response.message).show();
+                     }
+                }
+            });
+         }
+      });
+   });
+</script>
+
+   

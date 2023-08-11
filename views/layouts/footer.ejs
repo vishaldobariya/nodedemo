@@ -1,0 +1,19 @@
+ <!-- start footer -->
+<footer class="footer mt-auto py-3 bg-light position-fixed bottom-0 text-center" style="width: 100%;">
+    <div class="container">
+        <span class="text-muted">@copyright 2022</span>
+    </div>
+</footer>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var message = $(".alert-success");
+        if (message.length) {
+            setTimeout(function () {
+                message.fadeOut("slow");
+            }, 5000);
+        }
+    });
+</script>
+<!-- end footer -->

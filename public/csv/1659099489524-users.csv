@@ -1,0 +1,20 @@
+﻿Id,Name,Username,Password,isDeleted,File,createdAt,updatedAt,created_by,updated_by
+1,Jignesh Mer,admin1,$2a$10$l/sDmuDpZlDbveq6/YtHAezVP98lhIDEr2tqDAcab.lWsWh1oHCEm,0,,7/25/22,7/28/22,,
+2,Parimal Dhadiyali,admin2,$2a$10$lXg.RO48udKWTDgKbJuXa.yIohepK4ZyyfEByYKCztCpYa07pxCaW,0,,7/25/22,7/28/22,,1
+3,Parth Pabari,admin3,$2a$10$BAbFHnTTEt61sKjeBaG6B.GmlGlUf7eQkUDdbaWykA87xr1vneQ/K,0,1659094989250-profile1.jpeg,7/25/22,7/27/22,,1
+4,Sunil Dora,admin4,$2a$10$zE09neid4aPC3CPeRJEwouH7sZOF1oOK2jq/LiHu4qe7wrBwU1o0m,0,,7/25/22,7/28/22,,12
+5,Neelam Gautal,admin5,$2a$10$tXG5WV.g7CQcTc3Q6z5ZYuWIOEfIjljSYn0L.nXIyzob3n3aD20Ma,0,,7/26/22,7/27/22,,
+6,Rishit mehta,admin6,$2a$10$w7x3vclwju9hC96P/x8l7.p8HaCdC3HO1B.CK7RyMOy36hVJK2STO,0,,7/26/22,7/28/22,,1
+7,Mark Jones,admin7,$2a$10$OZnDPkDaP9QwXKij1Wk53OUnAOp/ntDJOc1Yqo6qZWKrb.NxuQOxm,0,,7/26/22,7/28/22,,1
+8,Kinjal Modi,admin8,$2a$10$t4a1P0xqLnPTxAwnABIpxuLks3Seq0e8Yu7AgoZyOEIBxYOp0Y2dK,1,,7/27/22,7/28/22,,
+9,steve smith,admin9,$2a$10$LTCkydn8nimKgtYzTXGqAu9LsNS0CYtH1mCA/F1D8Q3kkpWXgTjqe,1,,7/27/22,7/27/22,,
+10,Chris Gayle,admin11,$2a$10$SFaCTCJhAkykReuNHWvwH.w2JbS6ivvEcqlYFlWxoLq..t4uVfKIW,1,,7/27/22,7/28/22,,
+11,Virat Kohali,admin12,$2a$10$M4p9L52hK2bQQd3gntjYG.1FUE8cgh4S1Pg/dWIQGJXmmL/06R.3G,1,,7/27/22,7/28/22,,
+12,Rishabh Pant,admin10,$2a$10$YEHe7hG1tW5EO6UAHph1rOw0EdxQMivQ9.dnVFnIUz8ZEFmuaRtfW,1,,7/27/22,7/28/22,,1
+13,admin 12,admin11,$2a$10$2QaZ304XVxoEbTRll4m2/uwL9GdKtmBrKByPJlKFJXmuEAVviMdMe,1,,7/27/22,7/27/22,,
+14,admin15,admin15,$2a$10$17jnsjy12709wWhAXfNbtuGaCmZuts7cDR8ByGCZdHd5uS0AnH8ca,1,,7/27/22,7/28/22,12,
+15,Rajiv Ganghi,rajivgandhi,$2a$10$6ah6.JQR6LkKJ5MhkVHEzOvgANzFLV6QuYbuXFxnxNwMCpTyNCgZC,0,1659088664123-profile3.jpeg,7/28/22,7/28/22,1,1
+16,undefined,undefined,undefined,0,,7/28/22,7/28/22,1,1
+17,Rajiv Ganghi,admin13,$2a$10$wEkyJp9vC.Vo4BkcRW5R8eDs0op0GfI7nXlj1XTZvNcGeUzAgQAkO,0,1659089378077-profile3.jpeg,7/29/22,7/29/22,2,1
+18,ddtest54,admin1e,$2a$10$vJ6dXT77vC4ouTrOMkpl/.tBiRAS/tmKNtZ/wgLsH16zY1ZNkMrIi,0,1659089762878-profile3.jpeg,7/29/22,7/29/22,1,1
+19,dasdasdasd,admin1234,$2a$10$XgBniPwTUiKK0d9jP03apOX/X4uSt.YI.6Q2.HurLQu2ZbktlxZXy,0,1659089342573-profile2.jpeg,7/29/22,7/29/22,1,0

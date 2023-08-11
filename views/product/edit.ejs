@@ -1,0 +1,78 @@
+<style type="text/css">
+.fileImage {
+    /* color: #17a2b8; */
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: none !important;
+}
+.btn-img-delete {
+    cursor: pointer;
+    color: rgb(233,94,27);
+    font-weight: 900;
+}
+</style>
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-10 col-md-6 col-sm-6">
+       <div class="card">
+          <div class="card-title text-center border-bottom">
+             <h2 class="p-3">Edit Product</h2>
+          </div>
+          <div class="card-body">
+             <form id="frmProduct" method="post" enctype="multipart/form-data" >
+                <input type="hidden" name="_csrf" value="<%- csrfToken %>">
+                <div class="mb-4">
+                   <label for="name" class="form-label">Name</label>
+                   <input type="text" class="form-control" id="name" name="name" value="<%= (data) ? data.name : '' %>"/>
+                   <div id="validationProductName" class="invalid-feedback"></div>
+                </div>
+                <div class="mb-4">
+                   <label for="product_number" class="form-label">Product Number</label>
+                   <input type="text" class="form-control" id="product_number" name="product_number" value="<%= (data) ? data.product_number : '' %>"/>
+                   <div id="validationProductNumber" class="invalid-feedback"></div>
+                </div>
+                <div class="mb-4">
+                    <label for="formFile" class="form-label">Product Image</label>
+                    <input class="form-control" type="file" id="file" name="file">
+                    <input class="form-control" type="hidden" name="filename" value="<%= (data) ? data.file : '' %>">
+                     <% if(data.file) { %>
+                        <img src="/uploads/product/<%= (data) ? data.file : '' %>" name="preview-img" id="preview-img" class="mt-2 img-thumbnail" height="100" width="100">
+
+                        <label class="fileImage p-2 pb-0 mb-0"><%= (data) ? data.file : '' %>&nbsp;&nbsp; <span class="btn-img-delete" aria-hidden="true" style="cursor: pointer" onclick="deleteImage(`<%= id %>`)">X</span>
+                        </label>
+                    <% } %>
+                </div>
+                <div>
+                   <button type="submit" class="btn text-light main-bg">Update</button>
+                   <button type="button" class="btn text-light main-bg" id="btn_cancel">Cancel</button>
+                   <button type="button" class="btn text-light main-bg" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+                </div>
+             </form>
+          </div>
+       </div>
+    </div>
+</div>
+<div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Delete Product</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       Are you sure you want to delete this product?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="btn_delete">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+    let id = '<%= id %>';
+    let url = '/api/v1/product/edit/' + id;
+    let method = 'PUT';
+</script>
+<script src="/js/product.js"></script>
+
+   

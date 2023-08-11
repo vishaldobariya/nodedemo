@@ -1,0 +1,7 @@
+﻿Id,Name,productNumber,isDeleted,File,createdAt,updatedAt,createdBy,updatedBy
+1,Test Product1,1000001,0,1660133891199-car1.jpg,8/10/22,8/10/22,1,0
+2,Test Product2,1000002,0,1660133904155-car2.jpg,8/10/22,8/10/22,1,0
+3,Test Product3,1000003,0,1660133918362-car3.jpg,8/10/22,8/10/22,1,0
+4,Test Product4,1000004,0,1660133928682-car1.jpg,8/10/22,8/10/22,1,0
+5,Test Product5,1000005,0,1660133965321-car3.jpg,8/10/22,8/10/22,1,1
+6,Test Product6,1000006,0,1660134126087-car3.jpg,8/10/22,8/10/22,1,0

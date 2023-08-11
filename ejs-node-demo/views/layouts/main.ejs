@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="csrf-token" content="<%- csrfToken %>" />
+        <title><%- title %></title>
+        <!-- CSS only -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+        <!-- JS only -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+        <style type="text/css">
+            :root {
+                --main-bg: #e91e63;
+            }
+            .form-check-input:checked {
+                background-color: var(--main-bg) !important;
+                border-color: var(--main-bg) !important;
+            }
+            .card,
+            .btn,
+            input {
+                border-radius: 0 !important;
+            }
+            .main-bg {
+                background: var(--main-bg) !important;
+            }
+            .alert-success {
+                position: fixed;
+                width: 100%;
+                top: 0;
+                opacity: 0.5;
+                color: #000;
+                text-align: center;
+                font-size: 17px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- start header -->
+       	<%- include('./header.ejs') %>
+        <!-- end header -->
+
+        <main class="flex-shrink-0">
+            <div class="container py-5">
+                <%- body %>
+            </div>
+            <!-- end container -->
+        </main>
+        <!-- end main -->
+
+        <!-- start footer -->
+        <%- include('./footer.ejs') %>
+        <!-- end footer -->
+    </body>
+</html>
